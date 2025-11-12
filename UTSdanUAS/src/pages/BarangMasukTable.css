@@ -149,3 +149,8 @@ table {
   overflow: hidden;
   font-size: 14px;
 }
+
+table thead th {
+  color: #000000; /* warna hitam */
+  font-weight: bold;
+}

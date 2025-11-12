@@ -3,7 +3,7 @@ import Sidebar from './components/Sidebar';
 import Home from './pages/Home';
 import './App.css';
 import { useState } from 'react';
-import FormBarang from './pages/FormBarang';
+import FormBarang from './components/organisms/FormBarang';
 import BarangMasukTable from './pages/BarangMasukTable';
 import EditBarang from './pages/EditBarang';
 

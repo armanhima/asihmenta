@@ -80,15 +80,35 @@ const filteredData = data.filter(item => {
 </div>
  
  
+{(searchNama !== "" || searchTanggal !== "") ? (
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nama Barang</th>
+        <th>Jumlah</th>
+        <th>Tanggal Masuk</th>
+      </tr>
+    </thead>
+    <tbody>
+      {filteredData.map((barang) => (
+        <tr key={barang.id}>
+          <td>{barang.id}</td>
+          <td>{barang.nama_barang}</td>
+          <td>{barang.jumlah}</td>
+          <td>{barang.tanggal_masuk}</td>
+           <td>
+                <button onClick={() => handleEdit(barang.id)}>Edit</button>
+                <button onClick={() => handleDelete(barang.id)}>Hapus</button>
+            </td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+) : (
+  <p>Silakan masukkan nama barang atau tanggal untuk melihat data.</p>
+)}
 
-{filteredData.map((barang) => (
-  <tr key={barang.id}>
-    <td>{barang.id}</td>
-    <td>{barang.nama_barang}</td>
-    <td>{barang.jumlah}</td>
-    <td>{barang.tanggal_masuk}</td>
-  </tr>
-))}
 
       <table>
         <thead>
